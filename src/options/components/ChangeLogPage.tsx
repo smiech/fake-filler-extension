@@ -5,7 +5,7 @@ import ExternalLink from "src/options/components/common/ExternalLink";
 const ChangeLogPage = () => {
   return (
     <div>
-      <h2>Fake Filler Changelog</h2>
+      <h2>Very Fake Filler Changelog</h2>
       <p>
         <strong>Version 3.2.0</strong>
       </p>
@@ -45,7 +45,7 @@ const ChangeLogPage = () => {
         <li>
           <ExternalLink url="https://fakefiller.com">
             <b>
-              The extension has been renamed to <mark>Fake Filler</mark>.
+              The extension has been renamed to <mark>Very Fake Filler</mark>.
             </b>
           </ExternalLink>
         </li>

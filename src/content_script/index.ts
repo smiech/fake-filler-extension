@@ -32,7 +32,7 @@ function handleMessage(request: MessageRequest): boolean | null {
   switch (request.type) {
     case "receiveNewOptions": {
       const options = request.data.options as IFakeFillerOptions;
-      initialize(options);
+      initialize(options, true);
       return true;
     }
 
@@ -49,7 +49,7 @@ document.addEventListener("mousedown", (event) => {
 
 chrome.runtime.sendMessage({ type: "getOptions" }, (response) => {
   const options = response.options as IFakeFillerOptions;
-  initialize(options);
+  initialize(options, true);
 });
 
 chrome.runtime.onMessage.addListener(handleMessage);

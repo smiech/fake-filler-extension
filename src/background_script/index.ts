@@ -15,7 +15,7 @@ function NotifyTabsOfNewOptions(options: IFakeFillerOptions) {
       if (tab && tab.id && tab.id !== chrome.tabs.TAB_ID_NONE) {
         chrome.tabs.sendMessage(
           tab.id,
-          { type: "receiveNewOptions", data: { options, isProEdition } },
+          { type: "receiveNewOptions", data: { options } },
           () => chrome.runtime.lastError
         );
       }

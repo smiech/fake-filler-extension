@@ -10,17 +10,20 @@
     "32": "images/icon-32.png",
     "48": "images/icon-48.png",
     "64": "images/icon-64.png",
-    "96": "images/icon-96.png",
     "128": "images/icon-128.png"
   },
-  "permissions": ["contextMenus", "activeTab", "<all_urls>", "storage"],
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "<all_urls>",
+    "storage"
+  ],
   "browser_action": {
     "default_icon": {
       "16": "images/icon-16.png",
       "32": "images/icon-32.png",
       "48": "images/icon-48.png",
       "64": "images/icon-64.png",
-      "96": "images/icon-96.png",
       "128": "images/icon-128.png"
     },
     "default_title": "__MSG_browserActionTitle__"
@@ -41,13 +44,19 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["build/content-script.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "build/content-script.js"
+      ],
       "all_frames": true
     }
   ],
   "background": {
-    "scripts": ["build/background-script.js"],
+    "scripts": [
+      "build/background-script.js"
+    ],
     "persistent": false
   },
   "options_ui": {
