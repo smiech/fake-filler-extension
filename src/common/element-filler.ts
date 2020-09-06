@@ -524,6 +524,7 @@ class ElementFiller {
           "telephone",
           "regex",
           "randomized-list",
+          "date"
         ]);
 
         if (telephoneCustomField) {
