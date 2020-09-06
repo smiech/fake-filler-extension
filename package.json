@@ -11,7 +11,7 @@
     "clean": "rimraf ./dist",
     "lint": "eslint src/**/*"
   },
-  "author": "Hussein Shabbir",
+  "author": "Stefan",
   "license": "MIT",
   "private": true,
   "dependencies": {

@@ -19,7 +19,7 @@ import ScrollToTop from "src/options/components/common/ScrollToTop";
 function App() {
   const dispatch = useDispatch();
 
-  const sendFeedbackMessage = chrome.i18n.getMessage("leftNav_sendFeedback", ["hussein@fakefiller.com"]);
+  const sendFeedbackMessage = chrome.i18n.getMessage("leftNav_sendFeedback", ["trzykiloziemniakow@protonmail.com"]);
 
   function handleResetSettings(event: React.SyntheticEvent): void {
     event.preventDefault();
@@ -53,7 +53,7 @@ function App() {
             <Nav.Link as={NavLink} to="/backup">
               {GetMessage("leftNav_backupRestore")}
             </Nav.Link>
-            <Nav.Link href="https://github.com/FakeFiller/fake-filler-extension/wiki" target="_blank">
+            <Nav.Link href="https://github.com/smiech/fake-filler-extension/wiki" target="_blank">
               Help
             </Nav.Link>
           </Nav>
@@ -79,7 +79,7 @@ function App() {
             <Link to="/changelog">{GetMessage("leftNav_changelog")}</Link>
           </li>
           <li className="list-inline-item">
-            <ExternalLink url="https://github.com/FakeFiller/fake-filler-extension/issues">
+            <ExternalLink url="https://github.com/smiech/fake-filler-extension/issues">
               {GetMessage("leftNav_issueTracker")}
             </ExternalLink>
           </li>
