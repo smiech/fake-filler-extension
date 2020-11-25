@@ -16,7 +16,9 @@ const validate = (values: IFakeFillerOptionsForm): FormikErrors<IFakeFillerOptio
     !values.fieldMatchName &&
     !values.fieldMatchLabel &&
     !values.fieldMatchClass &&
-    !values.fieldMatchPlaceholder
+    !values.fieldMatchPlaceholder &&
+    !values.fieldMatchUe &&
+    !(values.fieldMatchCustom !== "")
   ) {
     errors.fieldMatchId = GetMessage("generalSettings_validation_enterAtLeastOneMatch");
   }
@@ -63,6 +65,8 @@ const GeneralSettingsForm = (props: Props) => {
   initialValues.fieldMatchClass = props.options.fieldMatchSettings.matchClass;
   initialValues.fieldMatchPlaceholder = props.options.fieldMatchSettings.matchPlaceholder;
   initialValues.fieldMatchAriaLabel = props.options.fieldMatchSettings.matchAriaLabel;
+  initialValues.fieldMatchCustom = props.options.fieldMatchSettings.matchCustom;
+  initialValues.fieldMatchUe = props.options.fieldMatchSettings.matchUe;
 
   return (
     <Formik
@@ -140,10 +144,13 @@ const GeneralSettingsForm = (props: Props) => {
                 label={GetMessage("generalSettings_matchFields_useAriaLabel")}
               />
               <CheckboxField name="fieldMatchClass" label={GetMessage("generalSettings_matchFields_useClass")} />
+              <CheckboxField name="fieldMatchUe" label={GetMessage("generalSettings_matchFields_useUe")} />
+
               <CheckboxField
                 name="fieldMatchPlaceholder"
                 label={GetMessage("generalSettings_matchFields_usePlaceholder")}
               />
+              <TextField name="fieldMatchCustom" label={GetMessage("generalSettings_matchFields_useCustom")}></TextField>
               <div className="form-text text-muted">{GetMessage("generalSettings_matchFields_help")}</div>
             </div>
           </div>

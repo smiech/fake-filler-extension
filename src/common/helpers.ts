@@ -32,6 +32,8 @@ const FakeFillerDefaultOptions = (): IFakeFillerOptions => {
       matchName: true,
       matchClass: false,
       matchPlaceholder: false,
+      matchCustom: "",
+      matchUe: false
     },
     fields: [],
     ignoredFields: ["captcha", "hipinputtext"],

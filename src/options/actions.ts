@@ -92,6 +92,8 @@ export function saveOptions(options: IFakeFillerOptions, formValues?: IFakeFille
           matchAriaLabel: formValues.fieldMatchAriaLabel,
           matchName: formValues.fieldMatchName,
           matchPlaceholder: formValues.fieldMatchPlaceholder,
+          matchCustom: formValues.fieldMatchCustom,
+          matchUe: formValues.fieldMatchUe
         };
       }
 

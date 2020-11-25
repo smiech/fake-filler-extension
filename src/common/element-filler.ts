@@ -169,6 +169,11 @@ class ElementFiller {
     if (this.options.fieldMatchSettings.matchClass) {
       normalizedName += ` ${SanitizeText(element.className)}`;
     }
+    if (this.options.fieldMatchSettings.matchUe) {
+      normalizedName += ` ${SanitizeText(element.getAttribute("ue") || "")}`;
+    }
+
+    normalizedName += ` ${SanitizeText(element.getAttribute(this.options.fieldMatchSettings.matchCustom) || "")}`;
 
     if (this.options.fieldMatchSettings.matchPlaceholder) {
       normalizedName += ` ${SanitizeText(element.getAttribute("placeholder") || "")}`;

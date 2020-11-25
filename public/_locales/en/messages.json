@@ -509,6 +509,12 @@
   "generalSettings_matchFields_useClass": {
     "message": "Class attribute of the input tag"
   },
+  "generalSettings_matchFields_useUe": {
+    "message": "Ue attribute of the input tag"
+  },
+  "generalSettings_matchFields_useCustom": {
+    "message": "Custom attribute"
+  },
   "generalSettings_matchFields_usePlaceholder": {
     "message": "Placeholder attribute of the input tag"
   },
